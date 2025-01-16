@@ -1,0 +1,165 @@
+USE [IBK_DATA]
+GO
+
+/****** Object:  Table [dbo].['Football Players Data$']    Script Date: 09/01/2025 22:33:09 ******/
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[''Football Players Data$'']') AND type in (N'U'))
+DROP TABLE [dbo].['Football Players Data$']
+GO
+
+/****** Object:  Table [dbo].['Football Players Data$']    Script Date: 09/01/2025 22:33:09 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].['Football Players Data$'](
+	[Year] [float] NULL,
+	[Team] [nvarchar](255) NULL,
+	[NAME ] [nvarchar](255) NULL,
+	[No#] [float] NULL,
+	[Pos] [nvarchar](255) NULL,
+	[Ht] [nvarchar](255) NULL,
+	[Wt] [float] NULL,
+	[Age] [nvarchar](255) NULL,
+	[Exp] [nvarchar](255) NULL,
+	[College] [nvarchar](255) NULL,
+	[FirstName] [nvarchar](255) NULL,
+	[LastName] [nvarchar](255) NULL,
+	[Ft] [nvarchar](255) NULL,
+	[In] [nvarchar](255) NULL,
+	[Inches] [float] NULL,
+	[NumGrp] [nvarchar](255) NULL
+) ON [PRIMARY]
+GO
+
+SELECT*
+FROM [dbo].['Football Players Data']
+
+	Questions
+	
+1	Write a query to find all the players in the "Arizona" team.
+select*
+from [dbo].['Football Players Data']
+where team = 'Arizona'
+2	Write a query to find all the players who play as a "WR" (Wide Receiver).
+select*
+from [dbo].['Football Players Data']
+where POS ='WR'
+3	Write a query to list all players taller than 6 feet 2 inches.
+select*
+from [dbo].['Football Players Data']
+where inches = 74
+4	Write a query to find all players who attended the "Washington" college.
+select*
+from [dbo].['Football Players Data']
+where college like 'washington'
+5	Write a query to list players who are 25 years old or younger.
+select*
+from [dbo].['Football Players Data']
+where age <=25
+6	Write a query to find all players with missing Age data.
+select*
+from [dbo].['Football Players Data']
+where age = 'n/a'
+7	Write a query to find players who are rookies (Exp = 'R').
+select*
+from [dbo].['Football Players Data']
+where Exp = 'R'
+8	Write a query to find the tallest player on the "New Orleans" team.
+select top (1)*
+from [dbo].['Football Players Data']
+order by inches desc
+9	Write a query to find players weighing more than 250 pounds.
+select*
+from [dbo].['Football Players Data']
+where wt >250
+10	Write a query to calculate the average height of players at each position.
+select avg (inches), pos
+from [dbo].['Football Players Data']
+group by pos
+11	Write a query to find the heaviest player for each position.
+SELECT p.Name, p.Pos, p.Wt
+FROM Players p
+INNER JOIN (
+    SELECT Pos, MAX(Wt) AS MaxWeight
+    FROM Name
+    GROUP BY Pos
+) AS max_weights
+ON p.Pos = max_weights.Pos AND p.Wt = max_weights.MaxWeight
+12	Write a query to rank players by age within their team. If two players have the same age, rank them by their weight.
+SELECT Name, Team, Age, Wt,
+       RANK() OVER (PARTITION BY Team ORDER BY Age ASC, Wt DESC) AS Rank
+FROM [dbo].['Football Players Data']
+13	Write a query to calculate the average height (in inches) for all players older than 25 years.
+SELECT AVG(Ht) 
+FROM [dbo].['Football Players Data']
+WHERE Age > 25
+14	Write a query to find all players whose height is greater than the average height of their respective team.
+
+15	Write a query to find all players who share the same last name.
+SELECT Name, LastName
+FROM [dbo].['Football Players Data']
+WHERE LastName IN (
+    SELECT LastName
+    FROM [dbo].['Football Players Data']
+    GROUP BY LastName
+    HAVING COUNT(*) > 1)
+16	Write a query to find the players with the minimum height for each position.
+SELECT p.Name, p.Pos, p.Ht
+FROM [dbo].['Football Players Data'] p
+WHERE p.Ht = (
+    SELECT MIN(p1.Ht)
+    FROM [dbo].['Football Players Data'] p1
+    WHERE p1.Pos = p.Pos)
+
+17	Write a query to get the number of players for each team grouped by their experience level.
+SELECT 
+    p.Team, 
+    p.Exp, 
+    COUNT(*) AS NumberOfPlayers
+FROM 
+  [dbo].['Football Players Data']   p
+GROUP BY 
+    p.Team, 
+    p.Exp
+ORDER BY 
+    p.Team, 
+    p.Exp
+
+18	Write a query to find the tallest and shortest players from each college.
+SELECT 
+    p.College, 
+    MAX(p.Ht) AS TallestHeight, 
+    MIN(p.Ht) AS ShortestHeight
+FROM 
+   [dbo].['Football Players Data']  p
+GROUP BY 
+    p.College
+ORDER BY 
+    p.College
+
+
+19.	Write a query to find all players whose weight is above the average weight for their respective position.
+SELECT 
+    p.Name,
+    p.Pos,
+    p.Wt
+FROM 
+  [dbo].['Football Players Data']   p
+WHERE 
+    p.Wt > (
+        SELECT AVG(p1.Wt)
+        FROM [dbo].['Football Players Data'] p1
+        WHERE p1.Pos = p.Pos)
+
+20	Write a query to calculate the percentage of players in each position for every team.
+SELECT 
+    p.Team,
+    p.Pos,
+    COUNT(*) AS PosCount,
+    (COUNT(*) * 100.0 / t.TotalName) AS PositionPercentage
+FROM 
+    [dbo].['Football Players Data']
+
+
