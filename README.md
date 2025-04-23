@@ -28,4 +28,23 @@ has context menu
  
 **Technology used:** SQL server
 
+# Project 3
+
+**Title:** [HR Dashboard Full Insights](https://github.com/oparinu/oparinu.github.io/blob/main/HR%20Dashboard.pbix)
+
+**Tools Used:** PowerBI (Matrix, KPI Cards, slicers, Visiual level formatting, filters)
+
+**Project Description:** This projects provides a comprehensive overview of key performance metrics related to employee retention, satisfaction and productivity.
+
+The dashboard enables stakeholders to track and analyze essential HR indicators including job satisfaction, performance ratings, workforce demographics and compensation trends. With interactive insights, it supports informed decision-making and strategic planning to enhance employee engagment and organizational performance.
+
+Key features of the dashboard includes the total number of employees and gender breakdown by counts and percentages. it presents visual insights into monthly income by job level and education field, revealing trends across different employees' segments. The dashboard also examines job satisfaction in relation to office distance, assessing the impact of daily commuting on employee engagement and well-being. It further shows the number of active workers and identifies employees due and not due for promotion.
+
+Additionally, the dashboard includes Interactive slicers to filter data by job satisfaction, job level, and education field enabling focused analysis and more targeted HR strategies. 
+
+**Key findings:**
+
+**Dashboard Overview:**
+![HR_Insights](HR_Insights.png)
+
 
