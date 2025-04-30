@@ -25,6 +25,7 @@ Data Source Specification (FROM): Specified the tables used as data sources for 
 has context menu
 
 **Project Description:**
+This project analysed a dataset of professional football players using SQL queries to gain insights into various player attributes. The goal was to explore and filter data based on criteria such as position, height, weight, age, college, and team affiliation. Specific queries were used to identify players by team, filter by physical characteristics, and calculate statistics like average height by position. This analysis aimed to improve data-driven decision-making for team management, scouting, and performance assessment. By leveraging SQL, the project enabled efficient data extraction and provided actionable insights for understanding player profiles and trends.
  
 **Technology used:** SQL server
 
@@ -84,8 +85,59 @@ The dashboard includes the following features:
 
 This dashboard serves as a crucial tool for Tata's management team, providing clear and actionable insights that support informed decision-making and strategic planning.
 
-
 **Dashboard Overview:**
 ![Tata_Operation](Tata_Operation.png)
+
+# Project 5
+
+**Title:** Employee Details Data-Data Interrogation and Manipulation
+
+**SQL Code:** [Employee Information Data SQL Code](https://github.com/oparinu/oparinu.github.io/blob/main/SQL%20EMPLOYEE_DETAILS)
+
+**SQL Skills Used:** 
+
+Data Retrieval using SELECT to extract employee details, project names, and salary information from the database. 
+Data Aggregation was performed using functions like MAX, MIN, AVG, and COUNT to calculate the maximum, minimum, and average salaries, as well as to count the number of employees assigned to specific projects. 
+Data Filtering was achieved using WHERE, BETWEEN, IN, AND, and OR clauses to select employees based on manager IDs, cities, salary ranges, and project assignments. 
+Pattern Matching LIKE operator was used to find employee names that followed specific character patterns. 
+Data source Specification was handled through the FROM clause to accurately select the EmployeeDetails and EmployeeSalary tables. 
+Set Operations such as UNION were used to combine results from both tables when fetching employee IDs. 
+Arithmetic Operations were applied to calculate total salaries by adding fixed salaries to their corresponding variable components.
+
+**Project Description:** 
+The project focused on two tables: EmployeeDetails and EmployeeSalary. It used SQL operations to retrieve employee information based on manager relationships, extracting distinct project names and counting employees assigned to specific projects. The tasks included calculating maximum, minimum, and average salaries and identifying employees within a specific salary range. Employees were filtered based on city and manager criteria, and logical operators were applied to combine multiple conditions. Total salaries were calculated by combining fixed and variable components. Wild character operators were used to search for specific name patterns, and union operations were performed to fetch employee IDs from both tables, showcasing the efficiency of SQL data handling and analysis capabilities.
+ 
+**Technology used:** SQL server
+
+# Project 6
+
+**Title:** [Levain Global Cookie Sales Performance Dashboard](https://github.com/oparinu/oparinu.github.io/blob/main/Levain_Global_Dashboard.pbix)
+
+**Tools Used:** PowerBI (Matrix, KPI Cards, slicers, Visiual level formatting, filters)
+
+**Project Description:** This project provides an overview of cookie sales performance across countries and periods, focusing on key business metrics.
+
+The interactive Power BI dashboard allows stakeholders to explore sales data through visual insights into revenue, profit, units sold, and market trends. It supports data-driven decision-making and strategic planning to improve profitability and operational efficiency.
+
+Notable features include monthly revenue analysis and profit segmentation by country, highlighting seasonal fluctuations and regional contributions. The dashboard also presents unit sales and profit trends across years and geographic locations, revealing performance dynamics over time. High-level indicators such as total revenue and profit offer a concise snapshot of overall business outcomes.
+
+The dashboard incorporates slicers for country, year, and month names to enhance analytical flexibility. This enables users to easily filter results and conduct targeted analyses.
+
+**Key findings:** 
+
+**Revenue Peaks by Month:** Total revenue was highest during certain months, indicating strong seasonal demand for cookies, possibly during holidays or festive periods.
+
+**Top-Performing Countries:** Certain countries consistently generated higher profits, revealing stronger markets and more effective sales channels in those regions.
+
+**Profitability Trends by Year:** Profit margins improved year over year, suggesting better cost control or increased pricing efficiency.
+
+**Unit Sales vs. Profitability:** Some countries had high unit sales but lower profits, highlighting potential issues with pricing strategies or higher production costs.
+
+**Product Demand Variations:** Specific products showed stronger performance in certain regions or months, indicating opportunities for localized marketing and inventory planning.
+
+
+**Dashboard Overview:**
+![Levain_Global](Levain_Global.png)
+
 
 
