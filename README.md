@@ -4,9 +4,20 @@
 
 **Tools Used:** Microsoft excel (pivot table, pivot chart, slicers, conditional format, timeline)
 
-**Project Description:**
+**Project Description:** This project provides an overview of key sales and profitability metrics for an automation company, focusing on performance across different countries, customer segments, and product lines.
+
+The Excel dashboard presents essential insights including monthly profit by country, yearly sales segmented by customer type and product, and gross sales categorized by region and segment. It also highlights average sales price by segment and product, helping to assess pricing strategies. In addition, the dashboard evaluates sales performance by country and discount band to measure the effectiveness of promotional efforts.
+
+The dashboard with interactive slicers and dynamic visuals, allows stakeholders to explore sales trends, monitor market performance, and support data-driven decisions aimed at maximizing revenue and operational efficiency.
 
 **Key findings:**
+
+**Seasonal sales trends:** This highlighted sales activity peaked in December, with a noticeable spike in gross sales and units sold across all product types and regions. This suggests a possible seasonal demand or campaign driven push during this month, which is essential for future sales planning.
+
+**Uncovered geographic strengths and weaknesses:** The dashboard confirmed that  Canada, France and Germany contributed to overall sales volume and profit. Meanwhile some countries showed lower volumes or smaller profit margins, suggesting room for market development or review of pricing and distribution strategies.
+
+**Impact of product-channel alignment:** Products sold through specific segments e.g. Montana through Small Business and  Carretera through Government, showed higher efficiency in converting units sold into profit, indicating the importance of aligning product offerings with the right market segments.
+
 
 **Dashboard Overview:**
 ![Siemens](Siemens.png)
@@ -25,7 +36,9 @@ Data Source Specification (FROM): Specified the tables used as data sources for 
 has context menu
 
 **Project Description:**
-This project analysed a dataset of professional football players using SQL queries to gain insights into various player attributes. The goal was to explore and filter data based on criteria such as position, height, weight, age, college, and team affiliation. Specific queries were used to identify players by team, filter by physical characteristics, and calculate statistics like average height by position. This analysis aimed to improve data-driven decision-making for team management, scouting, and performance assessment. By leveraging SQL, the project enabled efficient data extraction and provided actionable insights for understanding player profiles and trends.
+This project analyzed a dataset of professional football players using SQL queries to gain insights into various player attributes. The goal was to explore and filter data based on criteria such as position, height, weight, age, college, and team affiliation. Specific queries were used to identify players by team, filter by physical characteristics, and calculate statistics like average height by position. 
+
+This analysis aimed to improve data-driven decision-making for team management, scouting, and performance assessment. By leveraging SQL, the project enabled efficient data extraction and provided actionable insights for understanding player profiles and trends.
  
 **Technology used:** SQL server
 
@@ -97,15 +110,22 @@ This dashboard serves as a crucial tool for Tata's management team, providing cl
 **SQL Skills Used:** 
 
 Data Retrieval using SELECT to extract employee details, project names, and salary information from the database. 
+
 Data Aggregation was performed using functions like MAX, MIN, AVG, and COUNT to calculate the maximum, minimum, and average salaries, as well as to count the number of employees assigned to specific projects. 
+
 Data Filtering was achieved using WHERE, BETWEEN, IN, AND, and OR clauses to select employees based on manager IDs, cities, salary ranges, and project assignments. 
+
 Pattern Matching LIKE operator was used to find employee names that followed specific character patterns. 
 Data source Specification was handled through the FROM clause to accurately select the EmployeeDetails and EmployeeSalary tables. 
+
 Set Operations such as UNION were used to combine results from both tables when fetching employee IDs. 
+
 Arithmetic Operations were applied to calculate total salaries by adding fixed salaries to their corresponding variable components.
 
 **Project Description:** 
-The project focused on two tables: EmployeeDetails and EmployeeSalary. It used SQL operations to retrieve employee information based on manager relationships, extracting distinct project names and counting employees assigned to specific projects. The tasks included calculating maximum, minimum, and average salaries and identifying employees within a specific salary range. Employees were filtered based on city and manager criteria, and logical operators were applied to combine multiple conditions. Total salaries were calculated by combining fixed and variable components. Wild character operators were used to search for specific name patterns, and union operations were performed to fetch employee IDs from both tables, showcasing the efficiency of SQL data handling and analysis capabilities.
+The project focused on two tables: EmployeeDetails and EmployeeSalary. It used SQL operations to retrieve employee information based on manager relationships, extracting distinct project names and counting employees assigned to specific projects. The tasks included calculating maximum, minimum, and average salaries and identifying employees within a specific salary range. Employees were filtered based on city and manager criteria, and logical operators were applied to combine multiple conditions. 
+
+Total salaries were calculated by combining fixed and variable components. Wild character operators were used to search for specific name patterns, and union operations were performed to fetch employee IDs from both tables, showcasing the efficiency of SQL data handling and analysis capabilities.
  
 **Technology used:** SQL server
 
